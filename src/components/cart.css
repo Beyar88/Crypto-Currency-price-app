@@ -1,0 +1,21 @@
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem;
+  color: white;
+  border-radius: 3px;
+}
+img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.cart:hover{
+  box-shadow: 0px 0px 10px 10px rgb(9, 144, 168);
+  cursor: pointer;
+}
