@@ -4,9 +4,9 @@ import "./cart.css";
 function Cart({ name, image, price, symbol }) {
   let roundPrice = parseFloat(price.toFixed(4));
   return (
-    <div className="cart">
+    <div className={`cart ${symbol}`}>
       <h3>{name}</h3>
-      <img style={{ width: "100px" }} src={image} />
+      <img src={image} />
       <span>{`${symbol} = $${roundPrice}`}</span>
     </div>
   );

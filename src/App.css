@@ -1,15 +1,8 @@
-.app {
-  background: url(https://wallpaperaccess.com/full/1267580.jpg);
-  height: 100%;
-  width: 100%;
-}
 .container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap:3rem;
+  margin: 5rem 3rem 2rem 3rem;
 }
 .app-header {
   display: flex;
@@ -30,11 +23,4 @@
   text-align: center;
   border-radius: 5px;
   border: 2px solid rgb(12, 133, 133);
-}
-
-
-@media (max-width: 700px) {
-  .app {
-    background: url(https://images6.alphacoders.com/912/thumb-1920-912465.jpg);
-  }
 }
