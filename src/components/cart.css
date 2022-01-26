@@ -7,18 +7,41 @@
   border-radius: 3px;
 }
 .BTC {
-  grid-area: 1/1/3/5;
+  grid-area: 1/1/4/4;
+  position: relative;
+  background-image: url("https://cdn.wallpapersafari.com/73/75/rFfJGY.jpg");
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+.BTC span {
+  color: goldenrod;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 1px;
+}
+.BTC h3 {
+  display: none;
+}
+.BTC img {
+  display: none;
 }
 img {
-  max-width: 100px;
+  width: 100px;
   border-radius: 50%;
 }
 
 span {
   font-size: 1rem;
   font-weight: 500;
+  color: goldenrod;
 }
 .cart:hover {
   box-shadow: 0px 0px 10px 10px rgb(9, 144, 168);
   cursor: pointer;
+}
+
+@media (max-width: 840px) {
+  .BTC {
+  }
 }

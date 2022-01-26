@@ -51,6 +51,35 @@ function App() {
             );
           })}
       </div>
+      <footer>
+        <h5>Developed by Beyar Alhaji</h5>
+        <ul className="footer-ul">
+          <li>
+            <a
+              href="https://github.com/Beyar88"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                id="github"
+                src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
+              ></img>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/beyar-alhaji-833345218"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                id="lindedin"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/1200px-Linkedin_icon.svg.png"
+              ></img>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 }

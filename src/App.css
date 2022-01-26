@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap:3rem;
+  grid-gap: 3rem;
   margin: 5rem 3rem 2rem 3rem;
 }
 .app-header {
@@ -23,4 +25,32 @@
   text-align: center;
   border-radius: 5px;
   border: 2px solid rgb(12, 133, 133);
+}
+
+footer {
+  color: aliceblue;
+  margin: 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 90vw;
+}
+footer h5 {
+  font-family: "Comforter", cursive;
+  font-weight: 100;
+}
+.footer-ul {
+  display: flex;
+  list-style: none;
+}
+#lindedin {
+  width: 50px;
+  border-radius: 20%;
+  margin: 10px;
+}
+
+#github {
+  margin: 10px;
+  width: 50px;
+  border-radius: 50%;
 }
