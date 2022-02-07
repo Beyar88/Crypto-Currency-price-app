@@ -1,0 +1,32 @@
+footer {
+    color: aliceblue;
+    margin: 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90vw;
+  }
+  footer h5 {
+    font-family: "Comforter", cursive;
+    font-weight: 100;
+  }
+  .footer-ul {
+    display: flex;
+    list-style: none;
+  }
+  #lindedin {
+    height: 50px;
+    width: 50px;
+    border-radius: 20%;
+    margin: 10px;
+    color: aqua;
+  }
+  
+  #github {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: aqua;
+  }
+  

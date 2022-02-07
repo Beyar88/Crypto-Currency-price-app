@@ -1,29 +1,33 @@
 import React from "react";
 import Cart from "./components/priceCart";
+import Footer from "./components/footer";
 import "./app.css";
-function App() {
-  const [coins, setcoins] = React.useState();
+
+const App = () => {
+  const [coins, setCoins] = React.useState([]);
+
   const [searchCoin, setsearchCoin] = React.useState("");
+
   React.useEffect(() => {
     fetch("https://api.coinstats.app/public/v1/coins?skip=0")
       .then((response) => {
-        if (response) {
-          console.log("success");
-        } else {
-          console.log("unseccessfull");
-        }
         return response.json();
       })
       .then((data) => {
         const coins = data.coins;
-        setcoins(coins);
-        console.log(coins);
+        const bitcoin = coins[0];
+        bitcoin.icon = "https://cdn.wallpapersafari.com/73/75/rFfJGY.jpg";
+        const slicedCoins = coins.slice(1);
+        const coinList = [bitcoin, ...slicedCoins];
+        setCoins(coinList);
       });
   }, []);
+
   let filteredCoin =
     coins?.filter((coin) => {
       return coin.name.toLowerCase().includes(searchCoin.toLowerCase());
     }) || coins;
+
   return (
     <div className="app">
       <header className="app-header">
@@ -38,7 +42,7 @@ function App() {
         ></input>
       </header>
       <div className="container">
-        {coins &&
+        {filteredCoin.length > 0 &&
           filteredCoin.map((coin) => {
             return (
               <Cart
@@ -51,37 +55,9 @@ function App() {
             );
           })}
       </div>
-      <footer>
-        <h5>Developed by Beyar Alhaji</h5>
-        <ul className="footer-ul">
-          <li>
-            <a
-              href="https://github.com/Beyar88"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <img
-                id="github"
-                src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
-              ></img>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/beyar-alhaji-833345218"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <img
-                id="lindedin"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/1200px-Linkedin_icon.svg.png"
-              ></img>
-            </a>
-          </li>
-        </ul>
-      </footer>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -6,26 +6,7 @@
   color: white;
   border-radius: 3px;
 }
-.BTC {
-  grid-area: 1/1/4/4;
-  position: relative;
-  background-image: url("https://cdn.wallpapersafari.com/73/75/rFfJGY.jpg");
-  background-size: 100% 90%;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-}
-.BTC span {
-  color: goldenrod;
-  font-size: 1rem;
-  position: absolute;
-  bottom: 1px;
-}
-.BTC h3 {
-  display: none;
-}
-.BTC img {
-  display: none;
-}
+
 img {
   width: 100px;
   border-radius: 50%;
@@ -41,7 +22,10 @@ span {
   cursor: pointer;
 }
 
-@media (max-width: 840px) {
-  .BTC {
-  }
+.BTC {
+  grid-area: 1/1/3/3;
+}
+.BTC img {
+  width: 100%;
+  object-fit: contain;
 }
