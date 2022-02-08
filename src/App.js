@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "./components/priceCart";
+import Card from "./components/priceCard";
 import Footer from "./components/footer";
 import "./app.css";
 
@@ -45,7 +45,7 @@ const App = () => {
         {filteredCoin.length > 0 &&
           filteredCoin.map((coin) => {
             return (
-              <Cart
+              <Card
                 name={coin.name}
                 image={coin.icon}
                 price={coin.price}

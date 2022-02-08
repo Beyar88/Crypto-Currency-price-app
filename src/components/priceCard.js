@@ -1,15 +1,18 @@
 import React from "react";
 import "./cart.css";
 
-function Cart({ name, image, price, symbol }) {
+function Card({ name, image, price, symbol }) {
   let roundPrice = parseFloat(price.toFixed(4));
   return (
-    <div className={`cart ${symbol}`}>
+    <a
+      className={`card ${symbol}`}
+      href={`https://coinmarketcap.com/currencies/${name}/`}
+    >
       <h3>{name}</h3>
       <img src={image} />
       <span>{`${symbol} = $${roundPrice}`}</span>
-    </div>
+    </a>
   );
 }
 
-export default Cart;
+export default Card;

@@ -1,4 +1,7 @@
-.cart {
+a {
+  text-decoration: none;
+}
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +20,7 @@ span {
   font-weight: 500;
   color: goldenrod;
 }
-.cart:hover {
+.card:hover {
   box-shadow: 0px 0px 10px 10px rgb(9, 144, 168);
   cursor: pointer;
 }
