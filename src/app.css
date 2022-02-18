@@ -26,3 +26,8 @@
   border-radius: 5px;
   border: 2px solid rgb(12, 133, 133);
 }
+
+.loading-icon {
+  width: 100vw;
+  margin: 20rem auto;
+}
